@@ -1,0 +1,9 @@
+{
+	"name": "preset",
+	"version": "0.1.0",
+	"license": "MIT",
+	"preset": "src/preset.js",
+	"devDependencies": {
+		"use-preset": "^0.1.0"
+	}
+}
