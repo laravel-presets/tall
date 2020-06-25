@@ -78,7 +78,6 @@ class AppServiceProvider extends ServiceProvider
 
 # To-do
 
-- Propose to automatically run `composer update`, then `npm install` or `yarn install`
 - Add the pagination by default, with a `--no-pagination` flag to omit them
 
 # Credits

@@ -1,4 +1,5 @@
-const { Preset, flags, Log, Color } = require('use-preset');
+const { Preset, Prompt, flags, Log, Color } = require('use-preset');
+const spawn = require('cross-spawn');
 
 module.exports = Preset.make({
 	name: 'Laravel TALL',
@@ -9,7 +10,7 @@ module.exports = Preset.make({
 		},
 	}),
 
-	actions: context => [
+	actions: () => [
 		{
 			type: 'edit-json',
 			file: 'package.json',
@@ -65,17 +66,31 @@ module.exports = Preset.make({
 			],
 		},
 	],
-	after(context) {
+	after: async context => {
 		if (context.flags.auth) {
 			Log.info(`Authentication has been scaffolded.`);
 		}
 
-		Log.info(
-			`You can now run ${Color.blue(
-				'composer update',
-			)} to install Livewire, and ${Color.blue(
-				'npm install',
-			)} to install NPM dependencies.`,
-		);
+		// Propose to install dependencies
+		if (await Prompt.confirm('Do you want to install NPM dependencies now?')) {
+			await context.installDependencies();
+			Log.success('Successfully installed dependencies.');
+		}
+
+		// prettier-ignore
+		if (await Prompt.confirm(`Do you want to run ${Color.blue('composer update')} to install Livewire?`)) {
+			const { status, output } = spawn.sync('composer', ['update']);
+			if (status !== 0) {
+				output
+					.join(' ')
+					.split('\n')
+					.filter(Boolean)
+					.forEach(message => {
+						Log.fatal(message.trim())
+					})
+			} else {
+				Log.success('Updated composer dependencies.')
+			}
+		}
 	},
 });
