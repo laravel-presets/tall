@@ -4,6 +4,6 @@
 	"license": "MIT",
 	"preset": "src/preset.js",
 	"devDependencies": {
-		"use-preset": "^0.1.0"
+		"use-preset": "^0.1.5"
 	}
 }
