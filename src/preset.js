@@ -1,4 +1,4 @@
-const { Preset, flags, Log } = require('use-preset');
+const { Preset, flags, Log, Color } = require('use-preset');
 
 module.exports = Preset.make({
 	name: 'Laravel TALL',
@@ -16,8 +16,8 @@ module.exports = Preset.make({
 			merge: {
 				devDependencies: {
 					'@tailwindcss/ui': '^0.1',
-					alpinejs: '^2.0',
 					'laravel-mix-tailwind': '^0.1.0',
+					alpinejs: '^2.0',
 					tailwindcss: '^1.4',
 				},
 			},
@@ -71,9 +71,9 @@ module.exports = Preset.make({
 		}
 
 		Log.info(
-			`You can now run ${Log.colors.yellow(
+			`You can now run ${Color.blue(
 				'composer update',
-			)} to install Livewire, and ${Log.colors.yellow(
+			)} to install Livewire, and ${Color.blue(
 				'npm install',
 			)} to install NPM dependencies.`,
 		);
