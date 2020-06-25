@@ -1,16 +1,16 @@
 <p align="center">
   <h1 align="center">Laravel TALL</h1>
   <p align="center">
+    <a href="https://github.com/use-preset/laravel-tall/actions">
+      <img alt="build status" src="https://github.com/use-preset/laravel-tall/workflows/tests/badge.svg" >
+    </a>
+    &nbsp;
     <a href="https://github.com/use-preset/use-preset/releases">
-      <img alt="npx use-preset tall" src="https://img.shields.io/badge/use--preset-laravel--tall-blue?style=flat-square">
+      <img alt="npx use-preset tall" src="https://img.shields.io/badge/use--preset-laravel--tall-blue">
     </a>
     &nbsp;
     <a href="https://www.npmjs.com/package/use-preset">
-      <img alt="use-preset version" src="https://img.shields.io/npm/v/use-preset?color=32c854&style=flat-square&label=use-preset">
-    </a>
-    &nbsp;
-    <a href="https://github.com/use-preset/laravel-tall/actions">
-      <img alt="build status" src="https://github.com/use-preset/laravel-tall/workflows/tests/badge.svg?style=flat-square" >
+      <img alt="use-preset version" src="https://img.shields.io/npm/v/use-preset?color=32c854&label=use-preset">
     </a>
   </p>
   <br />
