@@ -24,15 +24,13 @@
 
 # About
 
-> This preset is a port of [`laravel-frontend-presets/tall`](https://github.com/laravel-frontend-presets/tall/) from [Liam Hammett](https://twitter.com/LiamHammett)
+> This preset is a port of [`laravel-frontend-presets/tall`](https://github.com/laravel-frontend-presets/tall/). See [the credit section](#credits)
 
-This Laravel preset scaffolds an application using the [`TALL`](https://tallstack.dev/) stack, jumpstarting your application's development.
+This Laravel preset scaffolds an application using the [`TALL`](https://tallstack.dev/) stack, jumpstarting your application's development. If you are not familiar with the name, it is an acronym that describes the main technologies involved in the stack:
 
-If you are not familiar with the name, it is an acronym that describes the main technologies involved in the stack:
-
-| Tailwind CSS                | Alpine.js                    | Laravel       | Livewire                        |
-| --------------------------- | ---------------------------- | ------------- | ------------------------------- |
-| Utility-first CSS framework | Minimal Javascript framework | PHP framework | Full-stack UI Laravel framework |
+| [Tailwind CSS](https://tailwindcss.com/) | [Alpine.js](https://github.com/alpinejs/alpine) | [Laravel](https://laravel.com/) | [Livewire](https://laravel-livewire.com/) |
+| ---------------------------------------- | ----------------------------------------------- | ------------------------------- | ----------------------------------------- |
+| Utility-first CSS framework              | Minimal Javascript framework                    | PHP framework                   | Full-stack UI Laravel framework           |
 
 # Installation
 
