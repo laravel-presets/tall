@@ -4,17 +4,18 @@ const { Preset } = require('use-preset');
 module.exports = Preset.make('Laravel TALL')
 	.option('auth', false)
 	.option('pagination', true)
+	.option('interaction', true)
+
+	.apply('use-preset/laravel-tailwindcss')
+		.with('--no-interaction')
+		.title('Add Tailwind CSS from its preset')
+		.chain()
 
 	.editJson('package.json')
-		.title('Add Tailwind and Alpine')
+		.title('Add Alpine.js, remove Lodash & Axios')
 		.merge({
 			devDependencies: {
-				'@tailwindcss/ui': '^0.3',
-				'@tailwindcss/typography': '^0.2',
 				alpinejs: '^2',
-				tailwindcss: '^1',
-				'postcss-nested': '^4',
-				'postcss-import': '^12',
 			},
 		})
 		.delete(['devDependencies.lodash', 'devDependencies.axios'])
@@ -27,11 +28,6 @@ module.exports = Preset.make('Laravel TALL')
 				'livewire/livewire': '^1.2',
 			}
 		})
-		.chain()
-		
-	.delete()
-		.title('Delete SASS')
-		.directories('resources/sass')
 		.chain()
 
 	.copyDirectory('default')
@@ -71,11 +67,13 @@ module.exports = Preset.make('Laravel TALL')
 		.chain()
 
 	.installDependencies()
+		.if(({ flags }) => Boolean(flags.interaction))
 		.for('node')
 		.title('Install node dependencies')
 		.chain()
 
 	.updateDependencies()
+		.if(({ flags }) => Boolean(flags.interaction))
 		.for('php')
 		.title('Install PHP dependencies')
 		.chain();
