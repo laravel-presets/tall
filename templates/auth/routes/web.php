@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Auth\EmailVerificationController;
+use App\Http\Controllers\Auth\LogoutController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,10 +43,10 @@ Route::layout('layouts.auth')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('email/verify/{id}/{hash}', 'Auth\EmailVerificationController')
+    Route::get('email/verify/{id}/{hash}', EmailVerificationController::class)
         ->middleware('signed')
         ->name('verification.verify');
 
-    Route::post('logout', 'Auth\LogoutController')
+    Route::post('logout', LogoutController::class)
         ->name('logout');
 });
