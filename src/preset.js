@@ -9,7 +9,8 @@ module.exports = Preset.make('Laravel TALL')
 		.title('Add Tailwind and Alpine')
 		.merge({
 			devDependencies: {
-				'@tailwindcss/ui': '^0.1',
+				'@tailwindcss/ui': '^0.3',
+				'@tailwindcss/typography': '^0.2',
 				alpinejs: '^2',
 				tailwindcss: '^1',
 				'postcss-nested': '^4',
