@@ -13,6 +13,6 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        $this->get('/')->assertSuccessful();
+        $this->get(route('home'))->assertSuccessful();
     }
 }
