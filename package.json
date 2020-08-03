@@ -4,6 +4,10 @@
 	"license": "MIT",
 	"preset": "src/preset.js",
 	"devDependencies": {
-		"use-preset": "^0.1.14"
+		"standard-version": "^8.0.2",
+		"use-preset": "^0.1.15"
+	},
+	"scripts": {
+		"release": "standard-version --skip.changelog"
 	}
 }
