@@ -11,13 +11,13 @@
         @endif
 		
         <!-- Favicon -->
-		<link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+		<link rel="shortcut icon" href="{{ url(asset('favicon.ico')) }}">
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <link rel="stylesheet" href="{{ url(mix('css/app.css')) }}">
         @livewireStyles
 
         <!-- CSRF Token -->
