@@ -15,7 +15,7 @@
   </p>
   <br />
   <p align="center">
-    <code>use-preset</code> is a scaffolding tool for developers. <a href="https://docs.usepreset.dev/">Read the documentation</a> for more informations.
+    <code>use-preset</code> is a scaffolding tool for developers. <a href="https://docs.usepreset.dev/">Read the documentation</a> for more information.
   </p>
   <br />
   <pre align="center">npx use-preset laravel-tall</pre>
@@ -24,7 +24,7 @@
 
 # About
 
-> This preset is a port of [`laravel-frontend-presets/tall`](https://github.com/laravel-frontend-presets/tall/). See [the credit section](#credits)
+> This preset is inspired by [`laravel-frontend-presets/tall`](https://github.com/laravel-frontend-presets/tall/). See [the credit section](#credits)
 
 This Laravel preset scaffolds an application using the [`TALL`](https://tallstack.dev/) stack, jumpstarting your application's development. If you are not familiar with the name, it is an acronym that describes the main technologies involved in the stack:
 
@@ -36,14 +36,11 @@ This Laravel preset scaffolds an application using the [`TALL`](https://tallstac
 
 This preset is intended to be installed into a fresh Laravel application. Follow the [Laravel installation instructions](https://laravel.com/docs/7.x/installation) to ensure you have a working environment before continuing.
 
-**Then, run the following commands**:
+**Then, run the following command**:
 
 ```bash
 npx use-preset laravel-tall --auth
-composer update
 ```
-
-The `composer update` command is needed because the preset will add `livewire/livewire` to your `composer.json` file.
 
 ## Authentication
 
@@ -85,6 +82,7 @@ class AppServiceProvider extends ServiceProvider
 - [Dan Harrin](https://github.com/DanHarrin)
 - [Liam Hammett](https://github.com/imliam)
 - [Ryan Chandler](https://github.com/ryangjchandler)
+- [Enzo Innocenzi](https://github.com/innocenzi)
 - [Tailwind UI](https://tailwindui.com/) for the default authentication and pagination views
 - [`laravel-frontend-presets/tall`'s contributors](https://github.com/laravel-frontend-presets/tall/contributors)
 - [`use-preset`](https://github.com/use-preset/use-preset)
