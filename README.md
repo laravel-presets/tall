@@ -24,7 +24,7 @@
 
 # About
 
-> This preset is inspired by [`laravel-frontend-presets/tall`](https://github.com/laravel-frontend-presets/tall/). See [the credit section](#credits)
+> This preset is inspired by [`laravel-frontend-presets/tall`](https://github.com/laravel-frontend-presets/tall/).
 
 This Laravel preset scaffolds an application using the [`TALL`](https://tallstack.dev/) stack, jumpstarting your application's development. If you are not familiar with the name, it is an acronym that describes the main technologies involved in the stack:
 
