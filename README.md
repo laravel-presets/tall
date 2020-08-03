@@ -57,25 +57,7 @@ All routes, components, controllers and tests are published to your application.
 
 ## Pagination
 
-If you are using pagination, you set the default pagination views to the ones provided in the boot method of a service provider:
-
-```php
-use Illuminate\Pagination\Paginator;
-use Illuminate\Support\ServiceProvider;
-
-class AppServiceProvider extends ServiceProvider
-{
-    public function boot()
-    {
-        Paginator::defaultView('pagination::default');
-        Paginator::defaultSimpleView('pagination::simple-default');
-    }
-}
-```
-
-# To-do
-
-- Add the pagination by default, with a `--no-pagination` flag to omit them
+This preset sets up the paginator in the `AppServiceProvider` file. If you wish to not use itn you can add the `--no-pagination` flag.
 
 # Credits
 

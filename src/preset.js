@@ -3,6 +3,7 @@ const { Preset } = require('use-preset');
 // prettier-ignore
 module.exports = Preset.make('Laravel TALL')
 	.option('auth', false)
+	.option('pagination', true)
 
 	.editJson('package.json')
 		.title('Add Tailwind and Alpine')
@@ -50,6 +51,22 @@ module.exports = Preset.make('Laravel TALL')
 		.replace(`public const HOME = '/home';`).with(`public const HOME = '/';`)
 		.replace(`public const HOME = '/home';`).with(`public const HOME = '/';`)
 		.replace(`$namespace = 'App\\Http\\Controllers'`).with(`$namespace = ''`)
+		.chain()
+
+	.edit('app/Providers/AppServiceProvider.php')
+		.title('Setup pagination')
+		.if(({ flags }) => Boolean(flags.pagination))
+		.search(/use Illuminate\\Support\\ServiceProvider;/)
+			.addAfter('use Illuminate\\Pagination\\Paginator;')
+			.end()
+		.search(/public function boot\(\)/)
+			.addAfter([
+				`{`,
+				`    Paginator::defaultView('pagination::default');`,
+				`    Paginator::defaultSimpleView('pagination::simple-default');`,
+			])
+			.removeAfter(2) // Removes opening curly bracket and comment
+			.end()
 		.chain()
 
 	.installDependencies()
