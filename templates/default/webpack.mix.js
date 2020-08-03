@@ -1,6 +1,5 @@
-const mix = require("laravel-mix");
-
-require("laravel-mix-tailwind");
+const mix = require('laravel-mix');
+const { plugins } = require('./postcss.config');
 
 /*
  |--------------------------------------------------------------------------
@@ -13,11 +12,11 @@ require("laravel-mix-tailwind");
  |
  */
 
-mix.js("resources/js/app.js", "public/js/app.js")
-    .sass("resources/sass/app.scss", "public/css/app.css")
-    .tailwind("./tailwind.config.js")
-    .sourceMaps();
+mix
+	.js('resources/js/app.js', 'public/js/app.js')
+	.postCss('resources/css/app.css', 'public/build', plugins)
+	.sourceMaps();
 
 if (mix.inProduction()) {
-    mix.version();
+	mix.version();
 }
