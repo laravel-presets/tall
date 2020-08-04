@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ url(mix('css/app.css')) }}">
+        <link rel="stylesheet" href="{{ url(mix('build/app.css')) }}">
         @livewireStyles
 
         <!-- CSRF Token -->
@@ -27,7 +27,7 @@
     <body>
         @yield('body')
 
-        <script src="{{ mix('js/app.js') }}"></script>
+        <script src="{{ mix('build/app.js') }}"></script>
         @livewireScripts
     </body>
 </html>
