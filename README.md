@@ -57,7 +57,7 @@ All routes, components, controllers and tests are published to your application.
 
 ## Pagination
 
-This preset sets up the paginator in the `AppServiceProvider` file. If you wish to not use itn you can add the `--no-pagination` flag.
+This preset sets up the paginator in the `AppServiceProvider` file. If you wish to not use it, you can add the `--no-pagination` flag.
 
 # Credits
 
