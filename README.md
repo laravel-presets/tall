@@ -42,6 +42,12 @@ This preset is intended to be installed into a fresh Laravel application. Follow
 npx use-preset laravel-tall --auth
 ```
 
+You'll need to run `npm run dev` or `yarn dev` to compile your assets right after.
+
+> Note that because of [an issue with Laravel Mix](https://github.com/JeffreyWay/laravel-mix/pull/2339) itself, the `vue-template-compiler` will be added even though the preset doesn't uses Vue. You may need to run `npm install` or `yarn`, then `npm run dev` or `yarn dev` a second time after Mix installs `vue-template-compiler` if it results in an error.
+>
+> An alternative would be to use Webpack Encore instead of Laravel Mix, but no preset exist at this time and Mix will eventually end up fixing that issue (hopefully!).
+
 ## Authentication
 
 If you don't want the preset to install the authentication scaffolding, just omit the `--auth` flag.
