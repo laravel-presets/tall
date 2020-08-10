@@ -39,7 +39,7 @@ This preset is intended to be installed into a fresh Laravel application. Follow
 **Then, run the following command**:
 
 ```bash
-npx use-preset laravel-tall --auth
+npx use-preset laravel-tall
 ```
 
 You'll need to run `npm run dev` or `yarn dev` to compile your assets right after.
@@ -50,7 +50,7 @@ You'll need to run `npm run dev` or `yarn dev` to compile your assets right afte
 
 ## Authentication
 
-If you don't want the preset to install the authentication scaffolding, just omit the `--auth` flag.
+If you don't want the preset to install the authentication scaffolding, you may use the `--no-auth` flag.
 
 Some notable features of the authentication scaffolding include:
 

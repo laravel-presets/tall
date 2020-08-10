@@ -2,7 +2,7 @@ const { Preset } = require('use-preset');
 
 // prettier-ignore
 module.exports = Preset.make('Laravel TALL')
-	.option('auth', false)
+	.option('auth', true)
 	.option('pagination', true)
 	.option('interaction', true)
 
