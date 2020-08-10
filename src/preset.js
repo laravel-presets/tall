@@ -46,7 +46,6 @@ module.exports = Preset.make('Laravel TALL')
 	.edit(['app/Providers/RouteServiceProvider.php', 'app/Http/Middleware/RedirectIfAuthenticated.php'])
 		.title('Update route configuration')
 		.replace(`public const HOME = '/home';`).with(`public const HOME = '/';`)
-		.replace(`public const HOME = '/home';`).with(`public const HOME = '/';`)
 		.replace(`$namespace = 'App\\Http\\Controllers'`).with(`$namespace = ''`)
 		.chain()
 
