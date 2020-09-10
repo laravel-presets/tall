@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Auth;
 
+use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
@@ -22,6 +23,6 @@ class Verify extends Component
 
     public function render()
     {
-        return view('livewire.auth.verify');
+        return view('livewire.auth.verify')->extends('layouts.auth');
     }
 }

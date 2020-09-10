@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Auth\Passwords;
 
+use App\Providers\RouteServiceProvider;
 use Livewire\Component;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Auth;
@@ -86,6 +87,6 @@ class Reset extends Component
 
     public function render()
     {
-        return view('livewire.auth.passwords.reset');
+        return view('livewire.auth.passwords.reset')->extends('layouts.auth');
     }
 }
