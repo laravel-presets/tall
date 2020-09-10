@@ -25,7 +25,7 @@ module.exports = Preset.make('Laravel TALL')
 		.title('Add Livewire')
 		.merge({
 			require: {
-				'livewire/livewire': '^1.2',
+				'livewire/livewire': '^2.0',
 			}
 		})
 		.chain()
@@ -52,9 +52,6 @@ module.exports = Preset.make('Laravel TALL')
 	.edit('app/Providers/AppServiceProvider.php')
 		.title('Setup pagination')
 		.if(({ flags }) => Boolean(flags.pagination))
-		.search(/use Illuminate\\Support\\ServiceProvider;/)
-			.addAfter('use Illuminate\\Pagination\\Paginator;')
-			.end()
 		.search(/public function boot\(\)/)
 			.addAfter([
 				`{`,
