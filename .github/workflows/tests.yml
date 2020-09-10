@@ -71,3 +71,5 @@ jobs:
         run: |
           cd ../app
           vendor/bin/phpunit --verbose
+        env:
+          DB_PORT: ${{ job.services.mysql.ports['3306'] }}
