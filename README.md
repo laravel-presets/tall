@@ -34,7 +34,7 @@ This Laravel preset scaffolds an application using the [`TALL`](https://tallstac
 
 # Installation
 
-This preset is intended to be installed into a fresh Laravel application. Follow the [Laravel installation instructions](https://laravel.com/docs/7.x/installation) to ensure you have a working environment before continuing.
+This preset is intended to be installed into a fresh Laravel application. Follow the [Laravel installation instructions](https://laravel.com/docs/8.x/installation) to ensure you have a working environment before continuing.
 
 **Then, run the following command**:
 
