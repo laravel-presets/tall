@@ -13,15 +13,9 @@
       <img alt="use-preset version" src="https://img.shields.io/npm/v/use-preset?color=32c854&label=use-preset">
     </a>
   </p>
-  <br />
   <p align="center">
     <code>use-preset</code> is a scaffolding tool for developers. <a href="https://docs.usepreset.dev/">Read the documentation</a> for more information.
   </p>
-  <br />
-  <p align="center">
-    <pre>npx apply laravel:tall</pre>
-  </p>
-  &nbsp;
 <p>
 
 # About
