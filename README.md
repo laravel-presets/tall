@@ -18,7 +18,9 @@
     <code>use-preset</code> is a scaffolding tool for developers. <a href="https://docs.usepreset.dev/">Read the documentation</a> for more information.
   </p>
   <br />
-  <pre align="center">npx use-preset laravel-tall</pre>
+  <p align="center">
+    <pre>npx apply laravel:tall</pre>
+  </p>
   &nbsp;
 <p>
 
@@ -39,7 +41,7 @@ This preset is intended to be installed into a fresh Laravel application. Follow
 **Then, run the following command**:
 
 ```bash
-npx use-preset laravel-tall
+npx apply laravel:tall
 ```
 
 You'll need to run `npm run dev` or `yarn dev` to compile your assets right after.
